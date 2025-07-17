@@ -14,7 +14,7 @@ const SearchResult = () => {
     useEffect(() => {
         const fetchResults = async () => {
 
-            const res = await axios.get(`http://localhost:8080/api/user/search?query=${query}`, {
+            const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/search?query=${query}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setResults(res.data);
