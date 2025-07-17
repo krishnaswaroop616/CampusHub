@@ -48,7 +48,6 @@ export const AuthProvider = ({ children }) => {
         setUserId("");
         setToken("");
         localStorage.clear();
-        window.location.href="/login";
         alert("Logout successful");
     }
 
