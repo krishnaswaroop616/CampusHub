@@ -24,7 +24,7 @@ const Feed = () => {
 
         const fetchPosts = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/posts/`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/posts/`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -41,7 +41,7 @@ const Feed = () => {
 
     const toggleLike = async (postId) => {
         try {
-            const res = await axios.post(`http://localhost:8080/api/posts/${postId}/like`, {}, {
+            const res = await axios.post(`https://campushub-dk4a.onrender.com/api/posts/${postId}/like`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -68,7 +68,7 @@ const Feed = () => {
         }
 
         try {
-            const res = await axios.post(`http://localhost:8080/api/posts/${postId}/comment`, { text: comment }, {
+            const res = await axios.post(`https://campushub-dk4a.onrender.com/api/posts/${postId}/comment`, { text: comment }, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
