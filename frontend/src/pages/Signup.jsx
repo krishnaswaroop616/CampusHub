@@ -29,7 +29,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:8080/api/user/register", form);
+      const res = await axios.post("https://campushub-dk4a.onrender.com/api/user/register", form);
       login(res.data.newUser._id, res.data.token);
       setLoading(false);
       navigate("/feed");
