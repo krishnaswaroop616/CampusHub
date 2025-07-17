@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:8080/api/user/login", form);
+      const res = await axios.post("https://campushub-dk4a.onrender.com/api/user/login", form);
       login(res.data.user._id, res.data.token);
       setLoading(false);
       alert("Login successful");
