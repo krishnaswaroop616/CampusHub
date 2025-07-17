@@ -216,7 +216,7 @@ const Profile = () => {
 
     }
 
-    if (!user) return <div className="text-center mt-5 fs-2">Loading profile...</div>;
+    if (!user) return <div className="text-center mt-5 fs-2 text-white">Loading profile...</div>;
 
     return (
         <div className="container mt-4">
