@@ -28,7 +28,7 @@ const CreatePost = () => {
 
         try {
             setLoading(true);
-            const res = await axios.post(`http://localhost:8080/api/posts/create`, formData, {
+            const res = await axios.post(`https://campushub-dk4a.onrender.com/api/posts/create`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     "Content-Type": "multipart/form-data",
