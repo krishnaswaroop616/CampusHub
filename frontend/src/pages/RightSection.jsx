@@ -11,7 +11,7 @@ const RightSection = () => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/user/stats`);
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/stats`);
                 setStats(res.data);
             }
             catch (err) {
