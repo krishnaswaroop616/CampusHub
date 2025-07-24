@@ -10,7 +10,7 @@ const LeftSection = () => {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/user/${userId}`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
