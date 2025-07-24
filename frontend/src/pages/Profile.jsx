@@ -32,7 +32,7 @@ const Profile = () => {
 
         const fetchUser = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/user/${id}`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -50,7 +50,7 @@ const Profile = () => {
 
         const fetchProjects = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/projects/${id}`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/projects/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setProjects(Array.isArray(res.data) ? res.data : []);
@@ -72,7 +72,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserPosts = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/user/${id}/posts`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${id}/posts`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -95,7 +95,7 @@ const Profile = () => {
 
     const handleDeletePost = async (postId) => {
         try {
-            const res = await axios.delete(`http://localhost:8080/api/posts/${postId}`, {
+            const res = await axios.delete(`https://campushub-dk4a.onrender.com/api/posts/${postId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -112,7 +112,7 @@ const Profile = () => {
 
     const handleFollow = async () => {
         try {
-            await axios.post(`http://localhost:8080/api/user/${id}/follow`, {}, {
+            await axios.post(`https://campushub-dk4a.onrender.com/api/user/${id}/follow`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setIsFollowing(!isFollowing);
@@ -124,7 +124,7 @@ const Profile = () => {
 
     const fetchFollowers = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/api/user/${id}/followers`, {
+            const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${id}/followers`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -140,7 +140,7 @@ const Profile = () => {
 
     const fetchFollowing = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/api/user/${userId}/following`, {
+            const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${userId}/following`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -158,7 +158,7 @@ const Profile = () => {
         e.preventDefault();
         try {
             const formatted = { ...newProj, techStack: newProj.techStack.split(",").map((proj) => proj.trim()) };
-            const res = await axios.post(`http://localhost:8080/api/projects/create`, formatted, {
+            const res = await axios.post(`https://campushub-dk4a.onrender.com/api/projects/create`, formatted, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -184,7 +184,7 @@ const Profile = () => {
 
     const handleProjectDelete = async (projectId) => {
         try {
-            const res = await axios.delete(`http://localhost:8080/api/projects/delete/${projectId}`, {
+            const res = await axios.delete(`https://campushub-dk4a.onrender.com/api/projects/delete/${projectId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -200,7 +200,7 @@ const Profile = () => {
     const handleProjectUpdate = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.put(`http://localhost:8080/api/projects/update/${editingProject._id}`, editingProject, {
+            const res = await axios.put(`https://campushub-dk4a.onrender.com/api/projects/update/${editingProject._id}`, editingProject, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
