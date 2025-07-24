@@ -164,7 +164,7 @@ const Feed = () => {
                                                 ))}
 
                                                 {post.comments.length > 2 && (
-                                                    <button className='btn btn-link p-0 mt-2 text-primary link-underline link-underline-opacity-0' onClick={() => handleShowAllComments(post._id)} style={{ fontSize: "0.9rem" }}>
+                                                    <button className='btn btn-link p-0 mt-2 text-warning link-underline link-underline-opacity-0' onClick={() => handleShowAllComments(post._id)} style={{ fontSize: "0.9rem" }}>
                                                         {showAllComments === post._id ? "Hide comments" : `View all ${post.comments.length} comments`}
                                                     </button>
                                                 )}
