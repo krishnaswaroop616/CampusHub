@@ -22,7 +22,7 @@ const Editprofile = () => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/user/${userId}`, {
+                const res = await axios.get(`https://campushub-dk4a.onrender.com/api/user/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -63,7 +63,7 @@ const Editprofile = () => {
         try {
             setEditLoading(true);
             const updatedForm = { ...form, skills: form.skills.split(",").map((el) => el.trim()) };
-            await axios.put(`http://localhost:8080/api/user/update`, updatedForm, {
+            await axios.put(`https://campushub-dk4a.onrender.com/api/user/update`, updatedForm, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -88,7 +88,7 @@ const Editprofile = () => {
         formData.append(type, file);
 
         try {
-            const res = await axios.post(`http://localhost:8080/api/user/upload/${type}`, formData, {
+            const res = await axios.post(`https://campushub-dk4a.onrender.com/api/user/upload/${type}`, formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     "Content-Type": "multipart/form-data",
