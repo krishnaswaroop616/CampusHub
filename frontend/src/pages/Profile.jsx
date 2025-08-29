@@ -310,7 +310,7 @@ const Profile = () => {
             <div className="card mt-4 p-3 shadow-sm mb-5 bg-white bg-opacity-10 text-white">
                 <div className='d-flex justify-content-between mb-2 '>
                     <h5 className="fw-bold fs-3 mx-2">Projects</h5>
-                    <a className='btn btn-warning' href='#newProject' onClick={() => { setShowProjectForm(true) }}>Add new project</a>
+                    {userId === user._id && <a className='btn btn-warning' href='#newProject' onClick={() => { setShowProjectForm(true) }}>Add new project</a>}
                 </div>
                 {projects.length === 0 || !projects ? (
                     <p className="ms-2 mt-3">This user hasn't added any projects yet.</p>
