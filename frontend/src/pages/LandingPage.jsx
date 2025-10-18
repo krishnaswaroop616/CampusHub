@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
     return (
-        <div className="text-center py-4 text-light">
+        <div className="text-center py-4 text-light mt-4">
             <div className="container">
                 <h1 className="display-4 fw-bold mb-3 text-light">Welcome to CampusHub <i className="fa-solid fa-graduation-cap text-warning"></i></h1>
                 <p className="fs-5 text-light mb-4">Showcase your projects, follow peers, and grow together!</p>
