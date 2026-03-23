@@ -11,12 +11,8 @@ const app=express();
 const port=process.env.PORT || 8080;
 const url=process.env.MONGO_URI;
 
-app.use(cors({
-    origin: "https://campushubb.netlify.app",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/user",userRouter);
