@@ -12,7 +12,6 @@ const port=process.env.PORT || 8080;
 const url=process.env.MONGO_URI;
 
 app.use(cors());
-app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/user",userRouter);
